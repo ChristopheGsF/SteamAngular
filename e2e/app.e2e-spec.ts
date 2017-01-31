@@ -1,10 +1,10 @@
-import { SteamPage } from './app.po';
+import { AngularPage } from './app.po';
 
-describe('steam App', function() {
-  let page: SteamPage;
+describe('angular App', function() {
+  let page: AngularPage;
 
   beforeEach(() => {
-    page = new SteamPage();
+    page = new AngularPage();
   });
 
   it('should display message saying app works', () => {

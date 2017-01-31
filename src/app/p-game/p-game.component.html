@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead>
+    <th></th>
+    <th>Name</th>
+    <th>Summary</th>
+    <th>Storyline</th>
+    <th>Genres</th>
+    <th>Screenshots</th>
+    <th>Video</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src={{Game.cover.url}} alt="Cover"></td>
+      <td>{{Game.name}}</td>
+      <td>{{Game.summary}}</td>
+      <td>{{Game.storyline}}</td>
+      <td>{{Game.genres}}</td>
+      <td>
+        <img *ngFor="let screenG of Game.screenshots" src={{screenG.url}} alt="screenshots">
+      </td>
+      <td>
+        <span *ngFor="let vG of Game.videos">
+          <p>
+            {{vG.name}}
+            {{vG.video_id}}
+          </p>
+          <iframe width="100%" height="250" src={{ytURL}}{{vG.video_id}}></iframe>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
